@@ -1,0 +1,41 @@
+
+#curtain-container {
+    display: flex;
+    height: 100vh; 
+    width: 100vw;
+    position: absolute;
+    
+    & article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      flex: 1; 
+      background-size: cover;
+    }
+    
+      & h2 {
+        z-index: 1;
+        color:  #FFF;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8), 4px 4px 12px rgba(0, 0, 0, 0.4); 
+        font-family: 'Georgia', serif; 
+        text-transform: uppercase;
+      }
+  }
+  
+  #curtain-illuminated-item {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #flashlight {
+    position: absolute;
+    border-radius: 50%;
+    background-color: transparent; 
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.8);
+    transition: filter 0.5s ease;
+    pointer-events: none;
+     
+    filter: blur(100px); /* fallback */
+    filter: url(#blur-filter); /* actual filter using SVG */
+  }

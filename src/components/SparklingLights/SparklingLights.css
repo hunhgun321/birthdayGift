@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.sparkling-light {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(243, 240, 36, 0.8) 0%, rgba(255, 255, 255, 0.75) 70%); 
+    /* to make the light more solid, change the 4th param of the second rgba to a higher level*/
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    animation: moveAndFade 3s forwards;
+}
+
+#sparkling-lights-bg {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+@keyframes moveAndFade {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0px, -600px) scale(0); /* Move diagonally */
+        opacity: 0;
+    }
+}
+
+.trail {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    animation: fadeOut 5s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.testing-word{
+    color: red;
+}
