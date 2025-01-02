@@ -33,9 +33,11 @@
     border-radius: 50%;
     background-color: transparent; 
     box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.8);
-    transition: filter 0.5s ease;
+    /* transition: filter 0.5s ease; */
+    transition: transform 0.5s ease;/* 添加寬高的過渡效果 */
     pointer-events: none;
      
     filter: blur(100px); /* fallback */
     filter: url(#blur-filter); /* actual filter using SVG */
+    transform-origin: center; /* 設置變換的原點為中心 */
   }

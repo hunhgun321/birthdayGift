@@ -1,4 +1,4 @@
-.sparkling-lights {
+/* .sparkling-lights {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -9,7 +9,7 @@
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     animation: sparkle 2s infinite;
-  }
+  } */
   
   .sparkling-lights.active {
     box-shadow: 0 0 20px rgba(255, 255, 255, 1);
@@ -27,3 +27,30 @@
       opacity: 0;
     }
   }
+
+  /* CastleCss.css */
+.fade-out {
+  animation: fadeOut 3s forwards; /* 3秒淡出 */
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1; /* 開始時不透明 */
+  }
+  to {
+    opacity: 0; /* 結束時透明 */
+  }
+}
+
+.fade-in {
+  animation: fadeIn 3s forwards; /* 3秒淡入 */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* 開始時透明 */
+  }
+  to {
+    opacity: 1; /* 結束時不透明 */
+  }
+}

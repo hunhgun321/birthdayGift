@@ -7,7 +7,8 @@ import Curtain from "./components/Curtain/CurtainCopy.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
-
+  const [zoomLevel, setZoomLevel] = useState(1);
+  console.log("In parent: "+zoomLevel);
   return (
     <>
       <div
@@ -20,9 +21,9 @@ function App() {
           width: "100vw",
         }}
       >
-        <CastleIn2D />
+        <CastleIn2D count={count} zoomLevel={zoomLevel}/>
         <SparklingLights />
-        <Curtain />
+        <Curtain count={count} setCount={setCount} zoomLevel={zoomLevel} setZoomLevel={setZoomLevel}/>
       </div>
     </>
   );
